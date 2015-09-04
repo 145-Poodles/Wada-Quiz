@@ -1,0 +1,37 @@
+body {
+	font-family: 'Asap', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+#wrapper {
+	margin: 0 auto;
+	width: 920px;
+}
+#wrapper > img {
+	position: absolute;
+}
+header {
+	text-align: center;
+}
+article {
+	margin: 150px 0 0 0;
+	display: none;
+}
+article > h2 {
+	text-align: center;
+}
+article > #answers {
+	margin: 0 auto;
+	width: 400px;
+	text-align: left;
+}
+article > #answers > p {
+	display: inline-block;
+	margin: 5px 0 5px 80px;
+	width: 95px;
+	cursor: pointer;
+}
+article > #answers > p:hover {
+	background: black;
+	color: white;
+}
