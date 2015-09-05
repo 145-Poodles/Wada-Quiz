@@ -92,8 +92,8 @@ header {
 article {
 	position: absolute;
 	z-index: 1000;
-	top: 297px;
-	left: 20px;
+	top: 294px;
+	left: 18px;
 	width: 640px;
 	height: 204px;
 	background: url('../images/lobby.png');
