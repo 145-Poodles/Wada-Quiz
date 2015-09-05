@@ -118,8 +118,57 @@ article > #answers > p {
 	font-size: 20px;
 	text-align: center;
 	cursor: pointer;
+	transition: all 0.2s ease;
+	border-radius: 3px;
 }
 article > #answers > p:hover {
 	background: #18184a;
 	color: white;
+}
+.eight > #answers > p {
+	width: 270px;
+}
+.eleven > #answers > p {
+	width: 270px;
+}
+.fourteen > #answers > p {
+	width: 270px;
+}
+.fifteen > #answers > p {
+	margin: 0 0 15px 0;
+	width: 270px;
+}
+.sixteen > #answers > p {
+	margin: 0 0 15px 0;
+	width: 270px;
+}
+.seventeen > #answers > p {
+	margin: 0 0 15px 0;
+	width: 170px;
+}
+.eighteen > #answers > p {
+	margin: 0 0 15px 0;
+	width: 270px;
+}
+.nineteen > #answers > p {
+	margin: 0 0 15px 0;
+	width: 270px;
+}
+.more {
+	position: absolute;
+	left: 10px;
+	padding: 5px 6px 6px 18px;
+	bottom: 70px;
+	width: 230px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: white;
+	border-radius: 3px;
+	background: #18184a;
+	cursor: pointer;
+	transition: all 0.6s ease;
+}
+.more:hover {
+	color: #18184a;
+	background: white;
 }
