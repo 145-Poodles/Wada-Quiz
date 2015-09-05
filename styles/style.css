@@ -5,6 +5,38 @@ body {
 	width: 740px;
 	font-family: 'VT323', ;
 }
+header {
+	position: absolute;
+	right: 0;
+	top: 250px;
+	right: 110px;
+}
+header > p {
+	padding: 5px 10px 7px 10px;
+	margin: 0 0 10px 0;
+	width: 260px;
+	color: #18184a;
+	font-size: 40px;
+	text-align: center;
+	border-radius: 3px;
+	letter-spacing: 1px;
+	transition: all 0.2s ease;
+}
+header > p:last-of-type {
+	margin: 0 0 0 70px;
+	padding: 7px 0;
+	width: 140px;
+	color: white;
+	font-size: 32px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: #18184a;
+	cursor: pointer;
+}
+header > p:last-of-type:hover {
+	color: #18184a;
+	background: white;
+}
 .memoca {
 	z-index: 1000;
 	position: absolute;
@@ -86,9 +118,6 @@ body {
 	left: 0;
 	right: 0;
 }
-header {
-	text-align: center;
-}
 article {
 	position: absolute;
 	z-index: 1000;
@@ -166,9 +195,9 @@ article > #answers > p:hover {
 	border-radius: 3px;
 	background: #18184a;
 	cursor: pointer;
-	transition: all 0.6s ease;
+	transition: all 0.2s ease;
 }
 .more:hover {
-	color: #18184a;
+	color: black;
 	background: white;
 }
