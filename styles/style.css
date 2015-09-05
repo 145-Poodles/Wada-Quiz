@@ -1,37 +1,60 @@
 body {
-	font-family: 'Asap', sans-serif;
-	margin: 0;
-	padding: 0;
-}
-#wrapper {
+	background: url('../images/bg-3.png');
+	padding: 150px 0 0 0;
+	position: relative;
 	margin: 0 auto;
-	width: 920px;
+	width: 740px;
+	font-family: 'VT323', ;
 }
-#wrapper > img {
-	position: absolute;
+#wrapper > img:nth-of-type(1) {
+	border: 20px dashed #18184a;
+}
+#wrapper > img:nth-of-type(2) {
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+#wrapper > img:nth-of-type(3) {
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 }
 header {
 	text-align: center;
 }
 article {
-	margin: 150px 0 0 0;
+	position: absolute;
+	z-index: 1000;
+	top: 442px;
+	left: 15px;
+	width: 640px;
+	height: 204px;
+	background: url('../images/lobby.png');
 	display: none;
 }
 article > h2 {
+	padding: 60px 0 0 0;
+	font-size: 29px;
 	text-align: center;
+	color: #18184a;
 }
 article > #answers {
 	margin: 0 auto;
-	width: 400px;
+	width: 550px;
 	text-align: left;
 }
 article > #answers > p {
 	display: inline-block;
-	margin: 5px 0 5px 80px;
-	width: 95px;
+	margin: 5px 0 5px 0;
+	padding: 5px 0 5px 0;
+	width: 130px;
+	font-size: 20px;
+	text-align: center;
 	cursor: pointer;
 }
 article > #answers > p:hover {
-	background: black;
+	background: #18184a;
 	color: white;
 }
