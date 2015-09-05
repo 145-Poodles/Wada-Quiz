@@ -1,21 +1,86 @@
 body {
 	background: url('../images/bg-3.png');
 	padding: 150px 0 0 0;
-	position: relative;
 	margin: 0 auto;
 	width: 740px;
 	font-family: 'VT323', ;
 }
-#wrapper > img:nth-of-type(1) {
-	border: 20px dashed #18184a;
+.memoca {
+	z-index: 1000;
+	position: absolute;
+	right: -20px;
+	top: -90px;
 }
-#wrapper > img:nth-of-type(2) {
+.dolphi {
+	z-index: 1000;
+	position: absolute;
+	left: -40px;
+	top: -90px;
+}
+.logo {
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: -50px;
+	top: 105px;
+	right: 0;
+}
+.correct {
+	z-index: 1000;
+	display: none;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: -50px;
+	top: 270px;
+	right: 0;
+}
+.wrong {
+	z-index: 1000;
+	display: none;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: -50px;
+	top: 270px;
+	right: 0;
+}
+.stars {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 62px;
+	background: url('../images/stars.png');
+}
+.lost {
+	display: none;
+}
+.hitcounter {
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	right: 0;
+	left: -50px;
+	top: 80px;
+}
+.red-border {
+	border: 18px dashed #bf0000;
+}
+.blue-border {
+	border: 18px dashed #18184a;
+}
+#wrapper {
+	position: relative;
+	top: 70px;
+}
+#wrapper > img:nth-of-type(4) {
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	right: 0;
 }
-#wrapper > img:nth-of-type(3) {
+#wrapper > img:nth-of-type(5) {
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
@@ -27,8 +92,8 @@ header {
 article {
 	position: absolute;
 	z-index: 1000;
-	top: 442px;
-	left: 15px;
+	top: 297px;
+	left: 20px;
 	width: 640px;
 	height: 204px;
 	background: url('../images/lobby.png');
