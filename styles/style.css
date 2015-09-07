@@ -1,9 +1,13 @@
 body {
+	font-family: VT;
 	background: url('../images/bg-3.png');
-	padding: 150px 0 0 0;
+	padding: 55px 0 0 0;
 	margin: 0 auto;
 	width: 740px;
-	font-family: 'VT323', ;
+}
+@font-face {
+	font-family: VT;
+	src: url('../fonts/VT323-Regular.ttf');
 }
 header {
 	position: absolute;
@@ -54,8 +58,8 @@ header > p:last-of-type:hover {
 	margin-right: auto;
 	margin-left: auto;
 	left: -50px;
-	top: 105px;
 	right: 0;
+	top: 20px;
 }
 .correct {
 	z-index: 1000;
@@ -64,7 +68,7 @@ header > p:last-of-type:hover {
 	margin-right: auto;
 	margin-left: auto;
 	left: -50px;
-	top: 270px;
+	top: 200px;
 	right: 0;
 }
 .wrong {
@@ -74,7 +78,7 @@ header > p:last-of-type:hover {
 	margin-right: auto;
 	margin-left: auto;
 	left: -50px;
-	top: 270px;
+	top: 200px;
 	right: 0;
 }
 .stars {
@@ -87,14 +91,6 @@ header > p:last-of-type:hover {
 }
 .lost {
 	display: none;
-}
-.hitcounter {
-	position: absolute;
-	margin-right: auto;
-	margin-left: auto;
-	right: 0;
-	left: -50px;
-	top: 80px;
 }
 .red-border {
 	border: 18px dashed #bf0000;
@@ -186,10 +182,9 @@ article > #answers > p:hover {
 .more {
 	position: absolute;
 	left: 10px;
-	padding: 5px 6px 6px 18px;
+	padding: 5px 5px 6px 5px;
 	bottom: 70px;
-	width: 230px;
-	letter-spacing: 1px;
+	width: 100px;
 	text-decoration: none;
 	color: white;
 	border-radius: 3px;
@@ -200,4 +195,8 @@ article > #answers > p:hover {
 .more:hover {
 	color: black;
 	background: white;
+}
+@media screen and (min-height: 840) {
+}
+@media screen and (min-width: 840) {
 }

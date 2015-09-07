@@ -1,6 +1,9 @@
 var health = 3;
 var ready = false;
 $(document).ready(function() {
+    if ($(window).height() <= 700) {
+        $('.stars').hide();
+    };
     $('.blue-border').attr('src', './images/ready.png');
     $('header>p:last-of-type').click(function() {
         ready = true;
