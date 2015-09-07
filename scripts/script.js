@@ -3,6 +3,8 @@ var ready = false;
 $(document).ready(function() {
     if ($(window).height() <= 700) {
         $('.stars').hide();
+        $('body').css('padding-top', '30px');
+        $('.more').css('bottom', '10px');
     };
     $('.blue-border').attr('src', './images/ready.png');
     $('header>p:last-of-type').click(function() {

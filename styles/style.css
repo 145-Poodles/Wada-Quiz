@@ -59,7 +59,7 @@ header > p:last-of-type:hover {
 	margin-left: auto;
 	left: -50px;
 	right: 0;
-	top: 20px;
+	top: 10px;
 }
 .correct {
 	z-index: 1000;
