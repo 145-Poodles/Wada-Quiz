@@ -21,13 +21,10 @@ $(document).ready(function() {
                 }, 500);
                 if (health <= 0) {
                     $('#wrapper>img:nth-of-type(2)').show();
-                    $('.memoca').hide();
-                    $('.dolphi').hide();
-                    $('article').hide();
-                    $('.blue-border').hide();
+                    $('.memoca, .dolphi, article, .blue-border').hide();
                     $('body').css('background', 'url("./images/red-tile.png")');
-                    $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                    $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                    $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                     $('#wrapper>.lost').css('display', 'block');
                     $('.stars').css('background', 'url("./images/red-stars.png")');
                     $('.logo').attr('src', './images/red-logo.png');
@@ -49,13 +46,9 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -78,13 +71,9 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -107,13 +96,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -136,13 +123,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -165,13 +150,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -194,13 +177,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -224,13 +205,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -253,13 +232,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -282,13 +259,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -311,13 +286,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -340,13 +313,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -370,13 +341,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -399,13 +368,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -429,13 +396,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -458,13 +423,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -487,13 +450,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -516,13 +477,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -545,13 +504,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -574,13 +531,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
@@ -600,13 +555,11 @@ $(document).ready(function() {
                     }, 500);
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
-                        $('.memoca').hide();
-                        $('.dolphi').hide();
-                        $('article').hide();
-                        $('.blue-border').hide();
+                        $('.memoca, .dolphi, article, .blue-border').hide();
+
                         $('body').css('background', 'url("./images/red-tile.png")');
-                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border');
-                        $('#wrapper>img:nth-of-type(1)').addClass('red-border');
+                        $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
+
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
