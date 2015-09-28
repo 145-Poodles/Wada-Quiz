@@ -2,6 +2,9 @@ var health = 3;
 var ready = false;
 var heartWidth = $('.hearts').width();
 var removeWidth = 80;
+$(document).load(function() {
+    alert('hi');
+});
 $(document).ready(function() {
     if ($(window).height() <= 700) {
         $('.stars').hide();
