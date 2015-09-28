@@ -1,5 +1,7 @@
 var health = 3;
 var ready = false;
+var heartWidth = $('.hearts').width();
+var removeWidth = 80;
 $(document).ready(function() {
     if ($(window).height() <= 700) {
         $('.stars').hide();
@@ -10,11 +12,25 @@ $(document).ready(function() {
     $('header>p:last-of-type').click(function() {
         ready = true;
         if (ready) {
+            document.addEventListener('keydown', function(e) {
+                $('#answer').css({
+                    'background': '#18184a',
+                    'color': 'white'
+                });
+            });
             $('.blue-border').attr('src', './images/bg-2.jpg');
             $('header').remove();
-            $('.first').show();
+            $('.first, .healthBar').show();
             $('.first>#answers>p').not(document.getElementById('answer')).click(function() {
                 health -= 1;
+                $('.hearts').css({
+                    width: removeWidth
+                });
+                if (health == 1) {
+                    $('.hearts').css({
+                        width: removeWidth - 40
+                    });
+                };
                 $('.wrong').fadeIn(100);
                 setTimeout(function() {
                     $('.wrong').fadeOut(100);
@@ -24,11 +40,11 @@ $(document).ready(function() {
                     $('.memoca, .dolphi, article, .blue-border').hide();
                     $('body').css('background', 'url("./images/red-tile.png")');
                     $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                     $('#wrapper>.lost').css('display', 'block');
                     $('.stars').css('background', 'url("./images/red-stars.png")');
                     $('.logo').attr('src', './images/red-logo.png');
                     $('.more').css('background', 'red');
+                    $('.healthBar').remove();
                 };
             });
             $('.first>#answers>#answer').click(function() {
@@ -40,6 +56,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.second>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -53,6 +77,7 @@ $(document).ready(function() {
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -65,6 +90,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.third>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -78,6 +111,7 @@ $(document).ready(function() {
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -90,6 +124,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.fourth>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -97,14 +139,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -117,6 +158,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.fifth>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -124,14 +173,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -144,6 +192,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.sixth>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -151,14 +207,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -171,6 +226,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.seven>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -178,14 +241,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -199,6 +261,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.eight>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -206,14 +276,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -226,6 +295,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.nine>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -233,14 +310,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -253,6 +329,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.ten>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -260,14 +344,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -280,6 +363,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.eleven>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -287,14 +378,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -307,6 +397,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.twelve>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -314,14 +412,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -335,6 +432,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.thirteen>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -342,14 +447,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -362,6 +466,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.fourteen>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -369,14 +481,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -390,6 +501,14 @@ $(document).ready(function() {
                 $('.blue-border').attr('src', './images/The_greatest_moment.png');
                 $('.fifteen>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -397,14 +516,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -417,6 +535,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.sixteen>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -424,14 +550,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -444,6 +569,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.seventeen>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -451,14 +584,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -471,6 +603,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.eighteen>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -478,14 +618,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -498,6 +637,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.nineteen>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -505,14 +652,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
@@ -525,6 +671,14 @@ $(document).ready(function() {
                 }, 500);
                 $('.twenty>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -532,23 +686,31 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
             $('.twenty>#answers>#answer').click(function() {
                 $('.twenty').remove();
                 $('.twentyOne').show();
+                $('.healthBar').remove();
                 $('.blue-border').attr('src', './images/bg-1.jpg');
                 $('.twentyOne>#answers>p').not(document.getElementById('answer')).click(function() {
                     health -= 1;
+                    $('.hearts').css({
+                        width: removeWidth
+                    });
+                    if (health == 1) {
+                        $('.hearts').css({
+                            width: removeWidth - 40
+                        });
+                    };
                     $('.wrong').fadeIn(100);
                     setTimeout(function() {
                         $('.wrong').fadeOut(100);
@@ -556,14 +718,13 @@ $(document).ready(function() {
                     if (health <= 0) {
                         $('#wrapper>img:nth-of-type(2)').show();
                         $('.memoca, .dolphi, article, .blue-border').hide();
-
                         $('body').css('background', 'url("./images/red-tile.png")');
                         $('#wrapper>img:nth-of-type(1)').removeClass('blue-border').addClass('red-border');
-
                         $('#wrapper>.lost').css('display', 'block');
                         $('.stars').css('background', 'url("./images/red-stars.png")');
                         $('.logo').attr('src', './images/red-logo.png');
                         $('.more').css('background', 'red');
+                        $('.healthBar').remove();
                     };
                 });
             });
