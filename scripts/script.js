@@ -2,9 +2,6 @@ var health = 3;
 var ready = false;
 var heartWidth = $('.hearts').width();
 var removeWidth = 80;
-$(document).load(function() {
-    alert('hi');
-});
 $(document).ready(function() {
     if ($(window).height() <= 700) {
         $('.stars').hide();
@@ -21,6 +18,7 @@ $(document).ready(function() {
                     'color': 'white'
                 });
             });
+            $('.healthBar>p').html('0/20');
             $('.blue-border').attr('src', './images/bg-2.jpg');
             $('header').remove();
             $('.first, .healthBar').show();
@@ -51,6 +49,7 @@ $(document).ready(function() {
                 };
             });
             $('.first>#answers>#answer').click(function() {
+                $('.healthBar>p').html('1/20');
                 $('.first').remove();
                 $('.second').show();
                 $('.correct').fadeIn(100);
@@ -85,6 +84,7 @@ $(document).ready(function() {
                 });
             });
             $('.second>#answers>#answer').click(function() {
+                $('.healthBar>p').html('2/20');
                 $('.second').remove();
                 $('.third').show();
                 $('.correct').fadeIn(100);
@@ -119,6 +119,7 @@ $(document).ready(function() {
                 });
             });
             $('.third>#answers>#answer').click(function() {
+                $('.healthBar>p').html('3/20');
                 $('.third').remove();
                 $('.fourth').show();
                 $('.correct').fadeIn(100);
@@ -153,6 +154,7 @@ $(document).ready(function() {
                 });
             });
             $('.fourth>#answers>#answer').click(function() {
+                $('.healthBar>p').html('4/20');
                 $('.fourth').remove();
                 $('.fifth').show();
                 $('.correct').fadeIn(100);
@@ -187,6 +189,7 @@ $(document).ready(function() {
                 });
             });
             $('.fifth>#answers>#answer').click(function() {
+                $('.healthBar>p').html('5/20');
                 $('.fifth').remove();
                 $('.sixth').show();
                 $('.correct').fadeIn(100);
@@ -221,6 +224,7 @@ $(document).ready(function() {
                 });
             });
             $('.sixth>#answers>#answer').click(function() {
+                $('.healthBar>p').html('6/20');
                 $('.sixth').remove();
                 $('.seven').show();
                 $('.correct').fadeIn(100);
@@ -255,6 +259,7 @@ $(document).ready(function() {
                 });
             });
             $('.seven>#answers>#answer').click(function() {
+                $('.healthBar>p').html('7/20');
                 $('.seven').remove();
                 $('.eight').show();
                 $('.correct').fadeIn(100);
@@ -290,6 +295,7 @@ $(document).ready(function() {
                 });
             });
             $('.eight>#answers>#answer').click(function() {
+                $('.healthBar>p').html('8/20');
                 $('.eight').remove();
                 $('.nine').show();
                 $('.correct').fadeIn(100);
@@ -324,6 +330,7 @@ $(document).ready(function() {
                 });
             });
             $('.nine>#answers>#answer').click(function() {
+                $('.healthBar>p').html('9/20');
                 $('.nine').remove();
                 $('.ten').show();
                 $('.correct').fadeIn(100);
@@ -358,6 +365,7 @@ $(document).ready(function() {
                 });
             });
             $('.ten>#answers>#answer').click(function() {
+                $('.healthBar>p').html('10/20');
                 $('.ten').remove();
                 $('.eleven').show();
                 $('.correct').fadeIn(100);
@@ -392,6 +400,7 @@ $(document).ready(function() {
                 });
             });
             $('.eleven>#answers>#answer').click(function() {
+                $('.healthBar>p').html('11/20');
                 $('.eleven').remove();
                 $('.twelve').show();
                 $('.correct').fadeIn(100);
@@ -426,6 +435,7 @@ $(document).ready(function() {
                 });
             });
             $('.twelve>#answers>#answer').click(function() {
+                $('.healthBar>p').html('12/20');
                 $('.twelve').remove();
                 $('.thirteen').show();
                 $('.correct').show();
@@ -461,6 +471,7 @@ $(document).ready(function() {
                 });
             });
             $('.thirteen>#answers>#answer').click(function() {
+                $('.healthBar>p').html('13/20');
                 $('.thirteen').remove();
                 $('.fourteen').show();
                 $('.correct').fadeIn(100);
@@ -495,6 +506,7 @@ $(document).ready(function() {
                 });
             });
             $('.fourteen>#answers>#answer').click(function() {
+                $('.healthBar>p').html('14/20');
                 $('.fourteen').remove();
                 $('.fifteen').show();
                 $('.correct').fadeIn(100);
@@ -530,6 +542,7 @@ $(document).ready(function() {
                 });
             });
             $('.fifteen>#answers>#answer').click(function() {
+                $('.healthBar>p').html('15/20');
                 $('.fifteen').remove();
                 $('.sixteen').show();
                 $('.correct').fadeIn(100);
@@ -564,6 +577,7 @@ $(document).ready(function() {
                 });
             });
             $('.sixteen>#answers>#answer').click(function() {
+                $('.healthBar>p').html('16/20');
                 $('.sixteen').remove();
                 $('.seventeen').show();
                 $('.correct').fadeIn(100);
@@ -598,6 +612,7 @@ $(document).ready(function() {
                 });
             });
             $('.seventeen>#answers>#answer').click(function() {
+                $('.healthBar>p').html('17/20');
                 $('.seventeen').remove();
                 $('.eighteen').show();
                 $('.correct').fadeIn(100);
@@ -632,6 +647,7 @@ $(document).ready(function() {
                 });
             });
             $('.eighteen>#answers>#answer').click(function() {
+                $('.healthBar>p').html('18/20');
                 $('.eighteen').remove();
                 $('.nineteen').show();
                 $('.correct').fadeIn(100);
@@ -666,6 +682,7 @@ $(document).ready(function() {
                 });
             });
             $('.nineteen>#answers>#answer').click(function() {
+                $('.healthBar>p').html('19/20');
                 $('.nineteen').remove();
                 $('.twenty').show();
                 $('.correct').fadeIn(100);
@@ -700,6 +717,7 @@ $(document).ready(function() {
                 });
             });
             $('.twenty>#answers>#answer').click(function() {
+                $('.healthBar>p').html('20/20');
                 $('.twenty').remove();
                 $('.twentyOne').show();
                 $('.healthBar').remove();
