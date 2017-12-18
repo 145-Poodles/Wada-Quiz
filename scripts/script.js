@@ -1,4 +1,4 @@
-let health, level = 0;
+let goodPoints = 0, badPoints = 0, level = 0;
 
 // Button that listens for clicks to initiate game.
 let startGame = document.querySelector('.begin');
@@ -6,16 +6,21 @@ let startGame = document.querySelector('.begin');
 // HTML elements for displaying the questions in.
 let body = $('body');
 let question = document.querySelector('.question');
+let score = document.querySelector('.score');
+let mistakes = document.querySelector('.mistakes');
 let promptQuestion = $('.prompt > h2');
 let choices = $('.choices');
 
 function pickAnswer() {
     let that = $(this);
     if (that.text() == levels[level].answer) {
+        // Display the popup for picking the right answer.
         body.append('<img class="correct" src="./images/correct.png"/>');
         let correctImage = $('.correct');
+
         // Go to the next questions index in the questions object.
         level++;
+        goodPoints++;
 
         /* Reset the values inside the dom elements
         after the question is answered correctly
@@ -28,6 +33,11 @@ function pickAnswer() {
             correctImage.fadeOut(300);
         }, 700);
     } else {
+        // Increment the mistakes when the
+        // answer is wrong.
+        badPoints++;
+
+        // Display the popup for picking the wrong answer.
         body.append('<img class="wrong" src="./images/wrong.png"/>');
         let wrongImage = $('.wrong');
 
@@ -40,10 +50,15 @@ function pickAnswer() {
 }
 
 function updateQuestion() {
+    // Updating the counters
+    score.textContent = `Score: ${goodPoints}`;
+    mistakes.textContent = `Mistakes: ${badPoints}`;
+
+
     /* Acquire question headings, choices and backdrop
     from the array of objects that contain the questions
     in the questions.js */
-    $('article').css({'background': `url(${levels[level].backgroundPath}`});
+    $('.quiz').css({'background': `url(${levels[level].backgroundPath}`});
     question.textContent = `${levels[level].question}`;
     for (let i = 0; i < levels[level].choices.length; i++) {
         choices.append(`<p>${levels[level].choices[i]}</p>`);
@@ -74,8 +89,11 @@ $(document).ready(function() {
         // Pick the question and choices object from the objects script.
         updateQuestion();
 
+        // Initiate the scores window
+        $('.scores').css({'display': 'block'});
+
         // Change the background and move the question prompt to the display.
-        $('article').css({ 'z-index': 1000, 'background': `url(${levels[level].backgroundPath})`});
+        $('.quiz').css({ 'z-index': 1000, 'background': `url(${levels[level].backgroundPath})`});
         $('.prompt').css({'background': 'url("./images/lobby.png") no-repeat'});
     });
 });

@@ -5,15 +5,27 @@ body {
 	margin: 0 auto;
 	width: 740px;
 }
+/* Initiating font for plaintext */
 @font-face {
 	font-family: VT;
 	src: url('../fonts/VT323-Regular.ttf');
 }
+
+/* Centered title of the webpage */
+.logo {
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: -50px;
+	right: 0;
+	top: 10px;
+}
+
+/* Introduction to game section */
 header {
 	position: absolute;
 	top: 250px;
 	right: 110px;
-	/* background: url('../images/ready.png'); */
 }
 header > p {
 	padding: 5px 10px 7px 10px;
@@ -26,7 +38,9 @@ header > p {
 	letter-spacing: 1px;
 	transition: all 0.2s ease;
 }
-header > p:last-of-type {
+
+/* Styles for the button that initiates the game */
+.begin {
 	margin: 0 0 0 70px;
 	padding: 7px 0;
 	width: 140px;
@@ -37,10 +51,12 @@ header > p:last-of-type {
 	background: #18184a;
 	cursor: pointer;
 }
-header > p:last-of-type:hover {
+.begin:last-of-type:hover {
 	color: #18184a;
 	background: white;
 }
+
+/* Decorations around the game display window */
 .memoca {
 	z-index: 1001;
 	position: absolute;
@@ -53,14 +69,66 @@ header > p:last-of-type:hover {
 	left: -40px;
 	top: -90px;
 }
-.logo {
-	position: absolute;
-	margin-right: auto;
-	margin-left: auto;
-	left: -50px;
-	right: 0;
-	top: 10px;
+
+/* Centering the content of the page
+and of the quizs' too.*/
+#wrapper {
+	position: relative;
+	top: 70px;
 }
+#container {
+	width: 640px;
+	height: 480px;
+	border: 18px dashed #18184a;
+}
+
+/* Creating the quiz window and backgroud */
+.quiz {
+	position: absolute;
+	z-index: -1;
+	left: 18px;
+	width: 640px;
+	height: 480px;
+	background: url('../images/ready.png');
+}
+
+/* Creating the Quiz prompt on the bottom
+of the window that the player interacts with */
+.quiz > .prompt {
+	position: absolute;
+	top: 276px;
+	width: inherit;
+	height: inherit;
+}
+.quiz > .prompt > h2 {
+	padding: 50px 0 0 0;
+	font-size: 29px;
+	text-align: center;
+	color: #18184a;
+}
+.quiz > .prompt > .choices {
+	margin: 0 auto;
+	width: 550px;
+	text-align: left;
+}
+.quiz > .prompt > .choices > p {
+	display: inline-block;
+	margin: 5px 10px;
+	padding: 5px 7px;
+	width: 100px;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border-radius: 3px;
+}
+.quiz > .prompt > .choices > p:hover {
+	background: #18184a;
+	color: white;
+}
+
+/* Feedback from the game to what
+answer the player has picked */
 .correct {
 	z-index: 1000;
 	position: absolute;
@@ -79,6 +147,37 @@ header > p:last-of-type:hover {
 	top: 200px;
 	right: 0;
 }
+
+/* Score windows for the quiz result */
+.scores {
+	display: none;
+	z-index: 1001;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 50px;
+	top: 30px;
+	text-align: center;
+}
+.scores > p {
+	display: inline-block;
+	margin: 0 5px;
+	padding: 3px;
+	width: 120px;
+	height: 20px;
+	background: rgba(24, 24, 74, 0.7);
+	border-radius: 5px;
+}
+.scores > .score {
+	color: #94D3D6;
+}
+.scores > .mistakes {
+	color: #db3320;
+}
+
+/* Footer paragraph with more author content
+and the background */
 .stars {
 	width: 100%;
 	position: absolute;
@@ -86,59 +185,6 @@ header > p:last-of-type:hover {
 	bottom: 0;
 	height: 62px;
 	background: url('../images/stars.png');
-}
-.lost {
-	display: none;
-}
-#wrapper {
-	position: relative;
-	top: 70px;
-}
-#container {
-	width: 640px;
-	height: 480px;
-	border: 18px dashed #18184a;
-}
-article {
-	position: absolute;
-	z-index: -1;
-	left: 18px;
-	width: 640px;
-	height: 480px;
-	background: url('../images/ready.png');
-}
-article > .prompt {
-	position: absolute;
-	top: 276px;
-	width: inherit;
-	height: inherit;
-	/* background: url('../images/lobby.png') no-repeat; */
-}
-article > .prompt > h2 {
-	padding: 50px 0 0 0;
-	font-size: 29px;
-	text-align: center;
-	color: #18184a;
-}
-article > .prompt > .choices {
-	margin: 0 auto;
-	width: 550px;
-	text-align: left;
-}
-article > .prompt > .choices > p {
-	display: inline-block;
-	margin: 5px 10px;
-	padding: 5px 7px;
-	width: 100px;
-	font-size: 20px;
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.2s ease;
-	border-radius: 3px;
-}
-article > .prompt > .choices > p:hover {
-	background: #18184a;
-	color: white;
 }
 .more {
 	position: absolute;
@@ -157,29 +203,8 @@ article > .prompt > .choices > p:hover {
 	color: black;
 	background: white;
 }
-.healthBar {
+
+/* Lost game screen */
+.lost {
 	display: none;
-	width: 120px;
-	height: 50px;
-	background: rgba(24, 24, 74, 0.7);
-	padding: 3px;
-	border-radius: 5px;
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 50px;
-	top: 40px;
-	text-align: center;
-}
-.healthBar > p {
-	margin: 0 0 2px 0;
-	color: rgba(255,255,255,0.9);
-}
-.hearts {
-	overflow: hidden;
-	width: 120px;
-	margin: 0 auto;
-	height: 30px;
-	background: url("../images/hearts2.png");
 }
