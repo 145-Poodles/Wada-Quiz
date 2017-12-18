@@ -1,7 +1,8 @@
-var health = 3;
-var ready = false;
-var heartWidth = $('.hearts').width();
-var removeWidth = 80;
+let health = 3;
+let level = 0;
+let ready = false;
+let heartWidth = $('.hearts').width();
+let removeWidth = 80;
 $(document).ready(function() {
     if ($(window).height() <= 700) {
         $('.stars').hide();
@@ -18,8 +19,10 @@ $(document).ready(function() {
                     'color': 'white'
                 });
             });
-            $('.healthBar>p').html('0/20');
+            $('.healthBar>p').html(`${level}/20`);
             $('.blue-border').attr('src', './images/bg-2.jpg');
+
+            // After the player is ready, remove the intro
             $('header').remove();
             $('.first, .healthBar').show();
             $('.first>#answers>p').not(document.getElementById('answer')).click(function() {

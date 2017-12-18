@@ -11,9 +11,9 @@ body {
 }
 header {
 	position: absolute;
-	right: 0;
 	top: 250px;
 	right: 110px;
+	/* background: url('../images/ready.png'); */
 }
 header > p {
 	padding: 5px 10px 7px 10px;
@@ -42,13 +42,13 @@ header > p:last-of-type:hover {
 	background: white;
 }
 .memoca {
-	z-index: 1000;
+	z-index: 1001;
 	position: absolute;
 	right: -20px;
 	top: -90px;
 }
 .dolphi {
-	z-index: 1000;
+	z-index: 1001;
 	position: absolute;
 	left: -40px;
 	top: -90px;
@@ -63,7 +63,6 @@ header > p:last-of-type:hover {
 }
 .correct {
 	z-index: 1000;
-	display: none;
 	position: absolute;
 	margin-right: auto;
 	margin-left: auto;
@@ -73,7 +72,6 @@ header > p:last-of-type:hover {
 }
 .wrong {
 	z-index: 1000;
-	display: none;
 	position: absolute;
 	margin-right: auto;
 	margin-left: auto;
@@ -92,86 +90,55 @@ header > p:last-of-type:hover {
 .lost {
 	display: none;
 }
-.red-border {
-	border: 18px dashed #bf0000;
-}
-.blue-border {
-	border: 18px dashed #18184a;
-}
 #wrapper {
 	position: relative;
 	top: 70px;
 }
-#wrapper > img:nth-of-type(4) {
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
+#container {
+	width: 640px;
+	height: 480px;
+	border: 18px dashed #18184a;
 }
 article {
 	position: absolute;
-	z-index: 1000;
-	top: 294px;
+	z-index: -1;
 	left: 18px;
 	width: 640px;
-	height: 204px;
-	background: url('../images/lobby.png');
-	display: none;
+	height: 480px;
+	background: url('../images/ready.png');
 }
-article > h2 {
+article > .prompt {
+	position: absolute;
+	top: 276px;
+	width: inherit;
+	height: inherit;
+	/* background: url('../images/lobby.png') no-repeat; */
+}
+article > .prompt > h2 {
 	padding: 50px 0 0 0;
 	font-size: 29px;
 	text-align: center;
 	color: #18184a;
 }
-article > #answers {
+article > .prompt > .choices {
 	margin: 0 auto;
 	width: 550px;
 	text-align: left;
 }
-article > #answers > p {
+article > .prompt > .choices > p {
 	display: inline-block;
-	margin: 5px 0 5px 0;
-	padding: 5px 0 5px 0;
-	width: 130px;
+	margin: 5px 10px;
+	padding: 5px 7px;
+	width: 100px;
 	font-size: 20px;
 	text-align: center;
 	cursor: pointer;
 	transition: all 0.2s ease;
 	border-radius: 3px;
 }
-article > #answers > p:hover {
+article > .prompt > .choices > p:hover {
 	background: #18184a;
 	color: white;
-}
-.eight > #answers > p {
-	width: 270px;
-}
-.eleven > #answers > p {
-	width: 270px;
-}
-.fourteen > #answers > p {
-	width: 270px;
-}
-.fifteen > #answers > p {
-	margin: 0 0 15px 0;
-	width: 270px;
-}
-.sixteen > #answers > p {
-	margin: 0 0 15px 0;
-	width: 270px;
-}
-.seventeen > #answers > p {
-	margin: 0 0 15px 0;
-	width: 170px;
-}
-.eighteen > #answers > p {
-	margin: 0 0 15px 0;
-	width: 270px;
-}
-.nineteen > #answers > p {
-	margin: 0 0 15px 0;
-	width: 270px;
 }
 .more {
 	position: absolute;
@@ -215,8 +182,4 @@ article > #answers > p:hover {
 	margin: 0 auto;
 	height: 30px;
 	background: url("../images/hearts2.png");
-}
-@media screen and (min-height: 840) {
-}
-@media screen and (min-width: 840) {
 }
