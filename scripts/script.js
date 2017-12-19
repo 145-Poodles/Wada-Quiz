@@ -10,6 +10,9 @@ let score = document.querySelector('.score');
 let mistakes = document.querySelector('.mistakes');
 let promptQuestion = $('.prompt > h2');
 let choices = $('.choices');
+let quiz = $('.quiz');
+let prompt = $('.prompt');
+let gameOver = false;
 
 function pickAnswer() {
     let that = $(this);
@@ -54,14 +57,22 @@ function updateQuestion() {
     score.textContent = `Score: ${goodPoints}`;
     mistakes.textContent = `Mistakes: ${badPoints}`;
 
-
     /* Acquire question headings, choices and backdrop
     from the array of objects that contain the questions
     in the questions.js */
-    $('.quiz').css({'background': `url(${levels[level].backgroundPath}`});
+    quiz.css({'background': `url(${levels[level].backgroundPath}`});
     question.textContent = `${levels[level].question}`;
-    for (let i = 0; i < levels[level].choices.length; i++) {
-        choices.append(`<p>${levels[level].choices[i]}</p>`);
+
+    if (typeof levels[level].choices === 'undefined') {
+        score.remove();
+        mistakes.remove();
+        choices.append(`You have got a total of <strong>${goodPoints}</strong> points\n
+            and <strong>${badPoints}</strong> mistakes. I hope you learned a lot!`).css(
+                { 'font-size': '19px', 'text-align': 'center' });
+    } else {
+        for (i = 0; i < levels[level].choices.length; i++) {
+            choices.append(`<p>${levels[level].choices[i]}</p>`);
+        }
     }
 
     // If there are only two answers to pick from,
@@ -93,7 +104,7 @@ $(document).ready(function() {
         $('.scores').css({'display': 'block'});
 
         // Change the background and move the question prompt to the display.
-        $('.quiz').css({ 'z-index': 1000, 'background': `url(${levels[level].backgroundPath})`});
-        $('.prompt').css({'background': 'url("./images/lobby.png") no-repeat'});
+        quiz.css({ 'z-index': 1000, 'background': `url(${levels[level].backgroundPath})`});
+        prompt.css({'background': 'url("./images/lobby.png") no-repeat'});
     });
 });

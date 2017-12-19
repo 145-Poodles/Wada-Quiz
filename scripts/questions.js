@@ -49,5 +49,10 @@ let levels = [{
     question: 'Who is Wadanohara\'s Mom? :D?',
     choices: ['Princess Uomi', 'Chlomaki', 'Great Witch', 'The Moon'],
     backgroundPath: './images/cute.png',
-    answer: 'The Moon'
+    answer: 'The Moon',
+},{
+    question: 'Good points and bad points result!',
+    points: '',
+    backgroundPath: './images/endGame.jpg',
+    endGame: true
 }];

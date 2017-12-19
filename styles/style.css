@@ -169,6 +169,12 @@ answer the player has picked */
 	background: rgba(24, 24, 74, 0.7);
 	border-radius: 5px;
 }
+strong:first-of-type {
+	color: #94D3D6;
+}
+strong:last-of-type {
+	color: #db3320;
+}
 .scores > .score {
 	color: #94D3D6;
 }
