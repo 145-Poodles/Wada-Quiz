@@ -53,6 +53,6 @@ let levels = [{
 },{
     question: 'Good points and bad points result!',
     points: '',
-    backgroundPath: './images/endGame.jpg',
+    backgroundPath: './images/endGame.png',
     endGame: true
 }];

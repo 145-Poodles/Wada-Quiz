@@ -12,7 +12,6 @@ let promptQuestion = $('.prompt > h2');
 let choices = $('.choices');
 let quiz = $('.quiz');
 let prompt = $('.prompt');
-let gameOver = false;
 
 function pickAnswer() {
     let that = $(this);
@@ -70,8 +69,8 @@ function updateQuestion() {
     if (typeof levels[level].choices === 'undefined') {
         score.remove();
         mistakes.remove();
-        choices.append(`You have got a total of <strong>${goodPoints}</strong> points\n
-            and <strong>${badPoints}</strong> mistakes. I hope you learned a lot!`).css(
+        choices.append(`Thank you for playing my quiz <3! You have got a total of <strong>${goodPoints}</strong> points\n
+            and <strong>${badPoints}</strong> mistake/s. I hope you learned a lot!`).css(
                 { 'font-size': '19px', 'text-align': 'center' });
     } else {
         for (i = 0; i < levels[level].choices.length; i++) {
@@ -81,13 +80,13 @@ function updateQuestion() {
 
     // If there are only two answers to pick from,
     // I change their css to fit properly in the prompt.
-    if ($('.choices').children().length == 2) {
+    if (choices.children().length == 2) {
         $('.choices > p').css({
             'margin': '0px 3px',
             'padding': '5px',
             'width': '259px'
         });
-    } else if ($('.choices').children().length == 4) {
+    } else if (choices.children().length == 4) {
         $('.choices > p').css({
             'margin': '0px 3px',
             'padding': '5px',

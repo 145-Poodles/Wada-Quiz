@@ -209,8 +209,3 @@ and the background */
 	color: black;
 	background: white;
 }
-
-/* Lost game screen */
-.lost {
-	display: none;
-}
