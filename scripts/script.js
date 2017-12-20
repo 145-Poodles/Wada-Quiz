@@ -33,7 +33,9 @@ function pickAnswer() {
         updateQuestion();
 
         setTimeout(function() {
-            correctImage.fadeOut(300);
+            correctImage.fadeOut(300, function() {
+                this.remove();
+            });
         }, 700);
     } else {
         // Increment the mistakes when the
@@ -47,7 +49,9 @@ function pickAnswer() {
         // Disable the button after its clicked
         $(that).off();
         setTimeout(function() {
-            wrongImage.fadeOut(300);
+            wrongImage.fadeOut(300, function() {
+                this.remove();
+            });
         }, 700);
     }
 }
