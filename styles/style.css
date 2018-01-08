@@ -1,9 +1,9 @@
 body {
 	font-family: VT;
 	background: url('../images/bg-3.png');
-	padding: 55px 0 0 0;
-	margin: 0 auto;
-	width: 740px;
+	margin: 0;
+	padding: 30px 0 0 0;
+	height: 100vh;
 }
 /* Initiating font for plaintext */
 @font-face {
@@ -13,25 +13,45 @@ body {
 
 /* Centered title of the webpage */
 .logo {
-	position: absolute;
-	margin-right: auto;
-	margin-left: auto;
-	left: -50px;
+	position: relative;
+	margin: 0 auto 30px auto;
 	right: 0;
 	top: 10px;
 }
 
+/* Introduction to quiz */
+body > header {
+	margin: 0 auto 70px auto;
+	padding: 5px 25px 25px 25px;
+	width: 740px;
+	background: #293063;
+	border: 4px solid #24245b;
+	border-radius: 10px;
+	text-align: center;
+}
+body > header > footer {
+	margin: 10px 0;
+}
+body > header > footer > img {
+	display: inline-block;
+	margin: 30px;
+	width: 150px;
+}
+body > header > p {
+	color:white;
+	font-size: 1.1em;
+}
+
 /* Introduction to game section */
-header {
+#wrapper > header {
 	position: absolute;
 	top: 250px;
-	right: 110px;
+	right: 80px;
 }
-header > p {
+#wrapper > header > p {
 	padding: 5px 10px 7px 10px;
 	margin: 0 0 10px 0;
 	width: 260px;
-	color: #18184a;
 	font-size: 40px;
 	text-align: center;
 	border-radius: 3px;
@@ -60,13 +80,13 @@ header > p {
 .memoca {
 	z-index: 1001;
 	position: absolute;
-	right: -20px;
+	right: -30px;
 	top: -90px;
 }
 .dolphi {
 	z-index: 1001;
 	position: absolute;
-	left: -40px;
+	left: -10px;
 	top: -90px;
 }
 
@@ -75,18 +95,23 @@ and of the quizs' too.*/
 #wrapper {
 	position: relative;
 	top: 70px;
+	margin: 0 auto;
+	width: 740px;
 }
 #container {
+	margin: 0 auto;
 	width: 640px;
 	height: 480px;
-	border: 18px dashed #18184a;
+	border: 19px dashed #18184a;
 }
 
 /* Creating the quiz window and backgroud */
 .quiz {
 	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 	z-index: -1;
-	left: 18px;
 	width: 640px;
 	height: 480px;
 	background: url('../images/ready.png');
@@ -96,9 +121,10 @@ and of the quizs' too.*/
 of the window that the player interacts with */
 .quiz > .prompt {
 	position: absolute;
+	margin: 0 50px 0 0;
 	top: 276px;
 	width: inherit;
-	height: inherit;
+	height: 204px;
 }
 .quiz > .prompt > h2 {
 	padding: 50px 0 0 0;
@@ -130,22 +156,22 @@ of the window that the player interacts with */
 /* Feedback from the game to what
 answer the player has picked */
 .correct {
-	z-index: 1000;
 	position: absolute;
+	z-index: 1001;
 	margin-right: auto;
 	margin-left: auto;
-	left: -50px;
-	top: 200px;
+	left: 0;
 	right: 0;
+	top: 70px;
 }
 .wrong {
-	z-index: 1000;
 	position: absolute;
+	z-index: 1001;
 	margin-right: auto;
 	margin-left: auto;
-	left: -50px;
-	top: 200px;
+	left: 0;
 	right: 0;
+	top: 70px;
 }
 
 /* Score windows for the quiz result */
@@ -185,15 +211,15 @@ strong:last-of-type {
 /* Footer paragraph with more author content
 and the background */
 .stars {
-	width: 100%;
-	position: absolute;
+	position: relative;
+	margin: 150px 0 0 0;
 	left: 0;
 	bottom: 0;
 	height: 62px;
 	background: url('../images/stars.png');
 }
 .more {
-	position: absolute;
+	position: relative;
 	left: 10px;
 	padding: 5px 5px 6px 5px;
 	bottom: 70px;
