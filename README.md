@@ -11,7 +11,7 @@ When you first start the web page you get the ready window:
 ![Imgur](https://i.imgur.com/KCRhlfL.png)
 
 You click ready and the quiz begins, you get asked in a series of questions
-20 total (10 in updated vesrion). I don't think they are good, i've never had the chance
+20 total (10 in updated version). I don't think they are good, I've never had the chance
 to make a quiz so if my questions are easy or not making sense at all just try to endure it for me.
 This is how the quiz looks like when you're playing in either the version with the hearts or points:
 

@@ -41,6 +41,9 @@ body > header > footer > img {
 body > header > p {
 	color: white;
 }
+body > header > p > a {
+	color: #F3D68C;
+}
 
 /* Introduction to game section */
 #wrapper > header {
