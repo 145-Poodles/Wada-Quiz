@@ -1,8 +1,4 @@
-let goodPoints = 0, badPoints = 0, level = 0;
-
-// Jquery selectors of results table
-let tableGoodPoints = $('.row:nth-of-type(2)>.col:last-of-type>p');
-let tableBadPoints = $('.row:nth-of-type(3)>.col:last-of-type>p');
+let goodPoints = 0, badPoints = 0, level = Math.floor(Math.random() * 10), decrement = 10;
 
 // Button _this listens for clicks to initiate game.
 let startGame = document.querySelector('.begin');
@@ -17,6 +13,10 @@ let choices = $('.choices');
 let quiz = $('.quiz');
 let prompt = $('.prompt');
 
+// Jquery selectors of results table
+let tableGoodPoints = $('.row:nth-of-type(2)>.col:last-of-type>p');
+let tableBadPoints = $('.row:nth-of-type(3)>.col:last-of-type>p');
+
 function pickAnswer() {
 	let _this = $(this);
 	if (_this.text() == levels[level].answer) {
@@ -24,8 +24,14 @@ function pickAnswer() {
 		quiz.append('<img class="correct" src="./images/correct.png"/>');
 		let correctImage = $('.correct');
 
+
+		// Remove the completed question from the quiz
+		// so that it won't get picked twice
+		levels.splice(level, 1);
+
 		// Go to the next questions index in the questions object.
-		level++;
+		decrement--;
+		level = Math.floor(Math.random() * decrement);
 		goodPoints++;
 
 		/* Reset the values inside the dom elements
@@ -70,14 +76,14 @@ function updateQuestion() {
 	quiz.css({'background': `url(${levels[level].backgroundPath}`});
 	question.textContent = `${levels[level].question}`;
 
-	if (typeof levels[level].choices === 'undefined') {
+	if (levels[level].endGame) {
 		score.remove();
 		mistakes.remove();
 		choices.append(`Thank you for playing my quiz <3! You have got a total of <strong>${goodPoints}</strong> points\n
 			and <strong>${badPoints}</strong> mistake/s. I hope you learned a lot!`).css(
 				{ 'font-size': '19px', 'text-align': 'center' });
-		tableGoodPoints.text(goodPoints);
-		tableBadPoints.text(badPoints);
+				tableGoodPoints.text(goodPoints);
+				tableBadPoints.text(badPoints);
 			} else {
 				for (i = 0; i < levels[level].choices.length; i++) {
 					choices.append(`<p>${levels[level].choices[i]}</p>`);
