@@ -1,5 +1,9 @@
 let goodPoints = 0, badPoints = 0, level = 0;
 
+// Jquery selectors of results table
+let tableGoodPoints = $('.row:nth-of-type(2)>.col:last-of-type>p');
+let tableBadPoints = $('.row:nth-of-type(3)>.col:last-of-type>p');
+
 // Button _this listens for clicks to initiate game.
 let startGame = document.querySelector('.begin');
 
@@ -72,6 +76,8 @@ function updateQuestion() {
 		choices.append(`Thank you for playing my quiz <3! You have got a total of <strong>${goodPoints}</strong> points\n
 			and <strong>${badPoints}</strong> mistake/s. I hope you learned a lot!`).css(
 				{ 'font-size': '19px', 'text-align': 'center' });
+		tableGoodPoints.text(goodPoints);
+		tableBadPoints.text(badPoints);
 			} else {
 				for (i = 0; i < levels[level].choices.length; i++) {
 					choices.append(`<p>${levels[level].choices[i]}</p>`);
